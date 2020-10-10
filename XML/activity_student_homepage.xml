@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:context="com.example.healthylivingapp.StudentHomepage">
+
+<!--'RelativeLayout' has been used to define the layout of this screen.-->
+<!--The widgets below are used for the activity_student_homepage.xml file. I have specified the attributes for each widget.-->
+<!--'android:id' references the ID attribute from the Design tab in this XML file.-->
+<!--'android:text' and 'android:textColor' references the string and colour values from the strings.xml file and colors.xml file.-->
+<!--The 'android:layout...' attributes defines where the widgets are displayed on the screen.-->
+<!--The 'android:text...' attributes defines the style of text to be displayed (for example, the colour, size and style).-->
+<!--A variety of widgets have been used, including: TextView and Button.-->
+
+    <TextView
+        android:id="@+id/tvHomepageScreenTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="@string/text_student_homepage_title"
+        android:textColor="@color/blue"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnLearn"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvHomepageScreenTitle"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="37dp"
+        android:background="@color/blue"
+        android:text="@string/text_learn"
+        android:textSize="26sp"/>
+
+    <Button
+        android:id="@+id/btnActivities"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/btnLearn"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/btnLearn"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:background="@color/blue"
+        android:text="@string/text_activities"
+        android:textSize="26sp" />
+
+    <Button
+        android:id="@+id/btnQuiz"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/btnSignOut"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:background="@color/blue"
+        android:text="@string/text_quiz"
+        android:textSize="26sp" />
+
+    <Button
+        android:id="@+id/btnMyProgress"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/btnQuiz"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/btnQuiz"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:background="@color/blue"
+        android:text="@string/text_progress"
+        android:textSize="26sp" />
+
+    <Button
+        android:id="@+id/btnSignOut"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="43dp"
+        android:background="@color/blue"
+        android:text="@string/text_log_out"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/tvDisplayUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHomepageScreenTitle"
+        android:layout_centerHorizontal="true"
+        android:text="@string/text_display_user_name"
+        android:textColor="@color/dark_blue"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+</RelativeLayout>

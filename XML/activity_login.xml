@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_orange"
+    tools:context="com.example.healthylivingapp.Login">
+
+<!--'RelativeLayout' has been used to define the layout of this screen.-->
+<!--The widgets below are used for the activity_login.xml file. I have specified the attributes for each widget.-->
+<!--'android:id' references the ID attribute from the Design tab in this XML file.-->
+<!--'android:text' and 'android:textColor' references the string and colour values from the strings.xml file and colors.xml file.-->
+<!--The 'android:layout...' attributes defines where the widgets are displayed on the screen.-->
+<!--The 'android:text...' attributes defines the style of text to be displayed (for example, the colour, size and style).-->
+<!--A variety of widgets have been used, including: TextView, ImageView, EditText and Button.-->
+
+    <TextView
+        android:id="@+id/tvLoginScreenTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="@string/text_login_title"
+        android:textColor="@color/red"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLoginScreenTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="3dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="130dp"
+        android:maxWidth="130dp"
+        android:src="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivLogo"
+        android:layout_centerHorizontal="true"
+        android:ems="15"
+        android:hint="@string/hint_username"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etUserName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:ems="15"
+        android:hint="@string/hint_email"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:ems="15"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/tvUserType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etPassword"
+        android:layout_centerHorizontal="true"
+        android:ems="15"
+        android:inputType="textPersonName"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvUserType"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:background="@color/red"
+        android:ems="5"
+        android:text="@string/text_login" />
+
+    <Button
+        android:id="@+id/btnCreateAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:background="@color/red"
+        android:ems="10"
+        android:text="@string/text_create_account" />
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_purple"
+    tools:context="com.example.healthylivingapp.ActivityExercise">
+
+<!--'RelativeLayout' has been used to define the layout of this screen.-->
+<!--The widgets below are used for the activity_activity_exercise.xml file. I have specified the attributes for each widget.-->
+<!--'android:id' references the ID attribute from the Design tab in this XML file.-->
+<!--'android:text' and 'android:textColor' references the string and colour values from the strings.xml file and colors.xml file.-->
+<!--The 'android:layout...' attributes defines where the widgets are displayed on the screen.-->
+<!--The 'android:text...' attributes defines the style of text to be displayed (for example, the colour, size and style).-->
+<!--A variety of widgets have been used, including: TextView, ImageView and Button.-->
+<!--'ScrollView' has been used to allow the user to scroll up and down the page. The widgets are enclosed inside.-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tvExerciseOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="17dp"
+                android:text="@string/text_activity_exercise_one"
+                android:textColor="@color/pink"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivJumpingJacks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvExerciseOne"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="300dp"
+                android:maxWidth="300dp"
+                android:src="@drawable/jumpingjacks" />
+
+            <Button
+                android:id="@+id/btnFirstGo"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/ivJumpingJacks"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="56dp"
+                android:background="@color/purple"
+                android:text="@string/text_go"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/tvExerciseTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvExerciseOne"
+                android:layout_alignStart="@+id/tvExerciseOne"
+                android:layout_below="@+id/btnFirstGo"
+                android:layout_marginTop="24dp"
+                android:text="@string/text_activity_exercise_two"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivLunges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvExerciseTwo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="300dp"
+                android:maxWidth="300dp"
+                android:src="@drawable/lunges" />
+
+            <Button
+                android:id="@+id/btnSecondGo"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/ivLunges"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="56dp"
+                android:background="@color/purple"
+                android:text="@string/text_go"
+                android:textSize="26sp" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

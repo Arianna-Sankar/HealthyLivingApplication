@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_purple"
+    tools:context="com.example.healthylivingapp.ActivityEating">
+
+<!--'RelativeLayout' has been used to define the layout of this screen.-->
+<!--The widgets below are used for the activity_activity_eating.xml file. I have specified the attributes for each widget.-->
+<!--'android:id' references the ID attribute from the Design tab in this XML file.-->
+<!--'android:text' and 'android:textColor' references the string and colour values from the strings.xml file and colors.xml file.-->
+<!--The 'android:layout...' attributes defines where the widgets are displayed on the screen.-->
+<!--The 'android:text...' attributes defines the style of text to be displayed (for example, the colour, size and style).-->
+<!--A variety of widgets have been used, including: TextView and ImageView.-->
+<!--'ScrollView' has been used to allow the user to scroll up and down the page. The widgets are enclosed inside.-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tvRecipeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="13dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/text_recipe_name"
+                android:textColor="@color/purple"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivRecipeMuffins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvRecipeName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="400dp"
+                android:maxWidth="400dp"
+                android:src="@drawable/muffins" />
+
+            <TextView
+                android:id="@+id/tvIngredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="339dp"
+                android:text="@string/text_ingredients_list"
+                android:textColor="@color/neon_green"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvStepOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvStepTwo"
+                android:layout_alignStart="@+id/tvStepTwo"
+                android:layout_below="@+id/tvIngredients"
+                android:layout_marginTop="23dp"
+                android:text="@string/text_step_one"
+                android:textColor="@color/pink"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvStepTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvRecipeName"
+                android:layout_alignStart="@+id/tvRecipeName"
+                android:layout_below="@+id/tvStepOne"
+                android:layout_marginTop="23dp"
+                android:text="@string/text_step_two"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvStepThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvStepTwo"
+                android:layout_alignStart="@+id/tvStepTwo"
+                android:layout_below="@+id/tvStepTwo"
+                android:layout_marginTop="24dp"
+                android:text="@string/text_step_three"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvStepFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvStepThree"
+                android:layout_alignStart="@+id/tvStepThree"
+                android:layout_below="@+id/tvStepThree"
+                android:layout_marginTop="23dp"
+                android:text="@string/text_step_four"
+                android:textColor="@color/dark_green"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvStepFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvStepFour"
+                android:layout_alignStart="@+id/tvStepFour"
+                android:layout_below="@+id/tvStepFour"
+                android:layout_marginTop="22dp"
+                android:text="@string/text_step_five"
+                android:textColor="@color/red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvNutritionDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvStepFive"
+                android:layout_alignStart="@+id/tvStepFive"
+                android:layout_below="@+id/tvStepFive"
+                android:layout_marginTop="11dp"
+                android:text="@string/text_nutrition_details"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

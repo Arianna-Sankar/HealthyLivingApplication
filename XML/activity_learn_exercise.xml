@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_yellow"
+    tools:context="com.example.healthylivingapp.LearnExercise">
+
+<!--'RelativeLayout' has been used to define the layout of this screen.-->
+<!--The widgets below are used for the activity_learn_exercise.xml file. I have specified the attributes for each widget.-->
+<!--'android:id' references the ID attribute from the Design tab in this XML file.-->
+<!--'android:text' and 'android:textColor' references the string and colour values from the strings.xml file and colors.xml file.-->
+<!--The 'android:layout...' attributes defines where the widgets are displayed on the screen.-->
+<!--The 'android:text...' attributes defines the style of text to be displayed (for example, the colour, size and style).-->
+<!--A variety of widgets have been used, including: TextView and ImageView.-->
+<!--'ScrollView' has been used to allow the user to scroll up and down the page. The widgets are enclosed inside.-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/ivTimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:adjustViewBounds="true"
+                android:maxHeight="200dp"
+                android:maxWidth="200dp"
+                android:src="@drawable/clock" />
+
+            <TextView
+                android:id="@+id/tvFact7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/ivTimer"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/text_fact_seven"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvFact8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvFact7"
+                android:layout_alignStart="@+id/tvFact7"
+                android:layout_below="@+id/tvFact7"
+                android:layout_marginTop="15dp"
+                android:text="@string/text_fact_eight"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivBasketball"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tvFact8"
+                android:layout_marginTop="24dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="100dp"
+                android:maxWidth="100dp"
+                android:src="@drawable/basketball" />
+
+            <ImageView
+                android:id="@+id/ivTennis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvFact8"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/tvFact8"
+                android:layout_marginLeft="185dp"
+                android:layout_marginStart="185dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="100dp"
+                android:maxWidth="100dp"
+                android:src="@drawable/tennis" />
+
+            <ImageView
+                android:id="@+id/ivBicycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/ivBasketball"
+                android:layout_marginEnd="159dp"
+                android:layout_marginRight="159dp"
+                android:layout_marginTop="23dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="100dp"
+                android:maxWidth="100dp"
+                android:src="@drawable/bicycle" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

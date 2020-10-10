@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_yellow"
+    tools:context="com.example.healthylivingapp.LearningMenu">
+
+<!--'RelativeLayout' has been used to define the layout of this screen.-->
+<!--The widgets below are used for activity_learning_menu.xml file. I have specified the attributes for each widget.-->
+<!--'android:id' references the ID attribute from the Design tab in this XML file.-->
+<!--'android:text' and 'android:textColor' references the string and colour values from the strings.xml file and colors.xml file.-->
+<!--The 'android:layout...' attributes defines where the widgets are displayed on the screen.-->
+<!--The 'android:text...' attributes defines the style of text to be displayed (for example, the colour, size and style).-->
+<!--A variety of widgets have been used, including: TextView, ImageView and Button.-->
+
+    <TextView
+        android:id="@+id/tvLearnScreenTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="@string/text_learn_title"
+        android:textColor="@color/gold"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ivBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="100dp"
+        android:maxWidth="100dp"
+        android:src="@drawable/learnbook" />
+
+    <ImageView
+        android:id="@+id/ivApple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ivFootball"
+        android:layout_alignRight="@+id/ivFootball"
+        android:layout_alignTop="@+id/btnEating"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:maxWidth="80dp"
+        android:src="@drawable/apple" />
+
+    <ImageView
+        android:id="@+id/ivFootball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivTennisBall"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:maxWidth="80dp"
+        android:src="@drawable/football" />
+
+    <ImageView
+        android:id="@+id/ivGrapes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnEating"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_toEndOf="@+id/btnExercise"
+        android:layout_toRightOf="@+id/btnExercise"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:maxWidth="80dp"
+        android:src="@drawable/grapes" />
+
+    <ImageView
+        android:id="@+id/ivTennisBall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ivGrapes"
+        android:layout_alignRight="@+id/ivGrapes"
+        android:layout_alignTop="@+id/btnExercise"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:maxWidth="80dp"
+        android:src="@drawable/tennisball" />
+
+    <Button
+        android:id="@+id/btnEating"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/tvLearnScreenTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:background="@color/gold"
+        android:text="@string/text_eating"
+        android:textSize="26sp" />
+
+    <Button
+        android:id="@+id/btnExercise"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/btnEating"
+        android:layout_alignStart="@+id/btnEating"
+        android:layout_below="@+id/btnEating"
+        android:layout_marginTop="82dp"
+        android:background="@color/gold"
+        android:text="@string/text_exercise"
+        android:textSize="26sp" />
+</RelativeLayout>

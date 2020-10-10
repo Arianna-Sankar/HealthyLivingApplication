@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_pink"
+    tools:context="com.example.healthylivingapp.StudentCompleteQuiz">
+
+<!--'RelativeLayout' has been used to define the layout of this screen.-->
+<!--The widgets below are used for the activity_student_complete_quiz.xml file. I have specified the attributes for each widget.-->
+<!--'android:id' references the ID attribute from the Design tab in this XML file.-->
+<!--'android:text' and 'android:textColor' references the string and colour values from the strings.xml file and colors.xml file.-->
+<!--The 'android:layout...' attributes defines where the widgets are displayed on the screen.-->
+<!--The 'android:text...' attributes defines the style of text to be displayed (for example, the colour, size and style).-->
+<!--A variety of widgets have been used, including: TextView and Button.-->
+
+    <TextView
+        android:id="@+id/tvQuizScreenTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="@string/text_quiz_title"
+        android:textColor="@color/pink"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvQuestionNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvQuestion"
+        android:layout_alignStart="@+id/tvQuestion"
+        android:layout_alignTop="@+id/tvQuizScreenTitle"
+        android:ems="5"
+        android:gravity="center"
+        android:text="@string/text_display_question_number"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tvQuizScreenTitle"
+        android:ems="5"
+        android:gravity="center"
+        android:text="@string/text_display_score"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvAnswer"
+        android:layout_alignStart="@+id/tvAnswer"
+        android:layout_below="@+id/tvQuizScreenTitle"
+        android:layout_marginTop="17dp"
+        android:ems="20"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/etChoice1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tvQuestion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:ems="22"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/etChoice2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/etChoice1"
+        android:layout_alignStart="@+id/etChoice1"
+        android:layout_below="@+id/etChoice1"
+        android:layout_marginTop="11dp"
+        android:ems="22"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/etChoice3"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/etChoice2"
+        android:layout_alignStart="@+id/etChoice2"
+        android:layout_below="@+id/etChoice2"
+        android:layout_marginTop="12dp"
+        android:ems="22"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/etChoice4"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/etChoice3"
+        android:layout_alignStart="@+id/etChoice3"
+        android:layout_below="@+id/etChoice3"
+        android:layout_marginTop="11dp"
+        android:ems="22"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tvScore"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/tvScore"
+        android:ems="20"
+        android:textSize="16sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnClickHere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etChoice4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:background="@color/pink"
+        android:ems="5"
+        android:text="@string/text_click_here" />
+
+    <TextView
+        android:id="@+id/tvDisplayUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etChoice1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/etChoice1"
+        android:layout_marginBottom="63dp"
+        android:visibility="invisible" />
+</RelativeLayout>

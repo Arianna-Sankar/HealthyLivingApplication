@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_purple"
+    tools:context="com.example.healthylivingapp.ActivitiesMenu">
+
+<!--'RelativeLayout' has been used to define the layout of this screen.-->
+<!--The widgets below are used for the activity_activities_menu.xml file. I have specified the attributes for each widget.-->
+<!--'android:id' references the ID attribute from the Design tab in this XML file.-->
+<!--'android:text' and 'android:textColor' references the string and colour values from the strings.xml file and colors.xml file.-->
+<!--The 'android:layout...' attributes defines where the widgets are displayed on the screen.-->
+<!--The 'android:text...' attributes defines the style of text to be displayed (for example, the colour, size and style).-->
+<!--A variety of widgets have been used, including: TextView, ImageView and Button.-->
+
+    <TextView
+        android:id="@+id/tvActivitiesScreenTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="@string/text_activities_title"
+        android:textColor="@color/purple"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ivRecipeBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnEating"
+        android:layout_toLeftOf="@+id/tvActivitiesScreenTitle"
+        android:layout_toStartOf="@+id/tvActivitiesScreenTitle"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:maxWidth="80dp"
+        android:src="@drawable/recipe" />
+
+    <ImageView
+         android:id="@+id/ivWeights"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignTop="@+id/btnExercise"
+         android:layout_toEndOf="@+id/tvActivitiesScreenTitle"
+         android:layout_toRightOf="@+id/tvActivitiesScreenTitle"
+         android:adjustViewBounds="true"
+         android:maxHeight="80dp"
+         android:maxWidth="80dp"
+         android:src="@drawable/weights" />
+
+    <Button
+        android:id="@+id/btnEating"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/tvActivitiesScreenTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:background="@color/purple"
+        android:text="@string/text_eating"
+        android:textSize="26sp" />
+
+    <Button
+        android:id="@+id/btnExercise"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/btnEating"
+        android:layout_alignStart="@+id/btnEating"
+        android:layout_below="@+id/btnEating"
+        android:layout_marginTop="82dp"
+        android:background="@color/purple"
+        android:text="@string/text_exercise"
+        android:textSize="26sp" />
+</RelativeLayout>

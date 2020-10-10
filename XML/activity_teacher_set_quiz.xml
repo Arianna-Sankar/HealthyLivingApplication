@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_pink"
+    tools:context="com.example.healthylivingapp.TeacherSetQuiz">
+
+<!--'RelativeLayout' has been used to define the layout of this screen.-->
+<!--The widgets below are used for the activity_teacher_set_quiz.xml file. I have specified the attributes for each widget.-->
+<!--'android:id' references the ID attribute from the Design tab in this XML file.-->
+<!--'android:text' and 'android:textColor' references the string and colour values from the strings.xml file and colors.xml file.-->
+<!--The 'android:layout...' attributes defines where the widgets are displayed on the screen.-->
+<!--The 'android:text...' attributes defines the style of text to be displayed (for example, the colour, size and style).-->
+<!--A variety of widgets have been used, including: TextView, EditText and Button.-->
+
+    <TextView
+        android:id="@+id/tvQuizScreenTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="@string/text_quiz_title"
+        android:textColor="@color/pink"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etQuestionNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:ems="5"
+        android:gravity="center"
+        android:hint="@string/hint_set_question_number"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/etQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvQuizScreenTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:ems="20"
+        android:hint="@string/hint_set_question"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etChoice1"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_above="@+id/etChoice2"
+        android:layout_alignLeft="@+id/etChoice2"
+        android:layout_alignStart="@+id/etChoice2"
+        android:ems="20"
+        android:hint="@string/hint_set_choice_one"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/etChoice2"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_above="@+id/etChoice3"
+        android:layout_centerHorizontal="true"
+        android:ems="20"
+        android:hint="@string/hint_set_choice_two"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/etChoice3"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/etChoice2"
+        android:layout_alignStart="@+id/etChoice2"
+        android:layout_centerVertical="true"
+        android:ems="20"
+        android:hint="@string/hint_set_choice_three"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/etChoice4"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/etChoice3"
+        android:layout_alignStart="@+id/etChoice3"
+        android:layout_below="@+id/etChoice3"
+        android:ems="20"
+        android:hint="@string/hint_set_choice_four"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/etAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnExistingQuestions"
+        android:layout_alignLeft="@+id/etQuestion"
+        android:layout_alignStart="@+id/etQuestion"
+        android:layout_marginBottom="64dp"
+        android:ems="20"
+        android:hint="@string/hint_set_answer"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="26dp"
+        android:layout_toEndOf="@+id/tvQuizScreenTitle"
+        android:layout_toRightOf="@+id/tvQuizScreenTitle"
+        android:background="@color/pink"
+        android:ems="5"
+        android:text="@string/text_save" />
+
+    <Button
+        android:id="@+id/btnExistingQuestions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnSave"
+        android:layout_toLeftOf="@+id/tvQuizScreenTitle"
+        android:layout_toStartOf="@+id/tvQuizScreenTitle"
+        android:background="@color/pink"
+        android:ems="5"
+        android:text="@string/text_existing_questions" />
+</RelativeLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_turquoise"
+    tools:context="com.example.healthylivingapp.TeacherViewProgress">
+
+<!--'RelativeLayout' has been used to define the layout of this screen.-->
+<!--The widgets below are used for the activity_teacher_view_progress.xml file. I have specified the attributes for each widget.-->
+<!--'android:id' references the ID attribute from the Design tab in this XML file.-->
+<!--'android:text' and 'android:textColor' references the string and colour values from the strings.xml file and colors.xml file.-->
+<!--The 'android:layout...' attributes defines where the widgets are displayed on the screen.-->
+<!--The 'android:text...' attributes defines the style of text to be displayed (for example, the colour, size and style).-->
+<!--A variety of widgets have been used, including: TextView, EditText and Button.-->
+<!--'ScrollView' has been used to allow the user to scroll up and down the page. The widgets are enclosed inside.-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvProgressScreenTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp"
+                android:text="@string/text_view_progress"
+                android:textColor="@color/turquoise"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etSearchStudent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tvProgressScreenTitle"
+                android:layout_marginLeft="14dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="29dp"
+                android:ems="11"
+                android:hint="@string/hint_search_for_student"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/etSearchStudent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/turquoise"
+                android:text="@string/text_search" />
+
+            <TextView
+                android:id="@+id/tvDisplayName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/etSearchStudent"
+                android:layout_alignStart="@+id/etSearchStudent"
+                android:layout_below="@+id/etSearchStudent"
+                android:layout_marginTop="43dp"
+                android:text="@string/text_display_student"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDisplayEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvDisplayName"
+                android:layout_alignStart="@+id/tvDisplayName"
+                android:layout_below="@+id/tvDisplayName"
+                android:layout_marginTop="23dp"
+                android:text="@string/text_display_email"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/tvDisplayNumberOfScores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvDisplayEmail"
+                android:layout_alignStart="@+id/tvDisplayEmail"
+                android:layout_below="@+id/tvDisplayEmail"
+                android:layout_marginTop="39dp"
+                android:text="@string/text_number_of_quizzes_completed"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvViewScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvDisplayNumberOfScores"
+                android:layout_alignStart="@+id/tvDisplayNumberOfScores"
+                android:layout_below="@+id/tvDisplayNumberOfScores"
+                android:layout_marginTop="22dp"
+                android:text="@string/text_display_score"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnViewScores"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_above="@+id/btnSendComments"
+                android:layout_alignLeft="@+id/etSendComments"
+                android:layout_alignStart="@+id/etSendComments"
+                android:text="@string/text_display_message" />
+
+            <EditText
+                android:id="@+id/etSendComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/etSearchStudent"
+                android:layout_alignLeft="@+id/tvDisplayNumberOfScores"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@+id/etSearchStudent"
+                android:layout_alignStart="@+id/tvDisplayNumberOfScores"
+                android:layout_marginTop="490dp"
+                android:ems="15"
+                android:hint="@string/text_display_student_comment"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnSendComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btnSearch"
+                android:layout_alignStart="@+id/btnSearch"
+                android:layout_alignTop="@+id/etSendComments"
+                android:layout_marginTop="11dp"
+                android:background="@color/turquoise"
+                android:text="@string/text_send" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

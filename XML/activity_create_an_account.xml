@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_green"
+    tools:context="com.example.healthylivingapp.CreateAnAccount">
+
+<!--'RelativeLayout' has been used to define the layout of this screen.-->
+<!--The widgets below are used for the activity_create_an_account.xml file. I have specified the attributes for each widget.-->
+<!--'android:id' references the ID attribute from the Design tab in this XML file.-->
+<!--'android:text' and 'android:textColor' references the string and colour values from the strings.xml file and colors.xml file.-->
+<!--The 'android:layout...' attributes defines where the widgets are displayed on the screen.-->
+<!--The 'android:text...' attributes defines the style of text to be displayed (for example, the colour, size and style).-->
+<!--A variety of widgets have been used, including: TextView, EditText, RadioGroup, RadioButton and Button.-->
+
+    <TextView
+        android:id="@+id/tvCreateAccountScreenTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="@string/text_create_account_title"
+        android:textColor="@color/dark_green"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvCreateAccountScreenTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:ems="15"
+        android:hint="@string/hint_username"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etSetPassword"
+        android:layout_alignStart="@+id/etSetPassword"
+        android:layout_below="@+id/etUserName"
+        android:layout_marginTop="27dp"
+        android:ems="15"
+        android:hint="@string/hint_set_email"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etSetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:ems="15"
+        android:hint="@string/hint_set_password"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/tvPasswordWarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/etSetPassword"
+        android:layout_alignRight="@+id/etSetPassword"
+        android:layout_below="@+id/etSetPassword"
+        android:ems="50"
+        android:gravity="right"
+        android:text="@string/text_password_message" />
+
+<!--The use of Radio Group and Radio Buttons allows the user to have a choice of selecting the 'teacher' or 'student' option.-->
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPasswordWarning"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:weightSum="1">
+        <RadioButton
+            android:id="@+id/rbtnTeacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etEmail"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:checked="false"
+            android:text="@string/text_teacher" />
+        <RadioButton
+            android:id="@+id/rbtnStudent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rbtnTeacher"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:checked="false"
+            android:text="@string/text_student" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnCreateAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:background="@color/dark_green"
+        android:ems="10"
+        android:text="@string/text_create_account" />
+
+    <EditText
+        android:id="@+id/etTeacherCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnCreateAccount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:ems="8"
+        android:hint="@string/hint_teacher_code"
+        android:inputType="textPersonName" />
+</RelativeLayout>

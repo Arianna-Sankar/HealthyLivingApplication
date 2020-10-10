@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_yellow"
+    tools:context="com.example.healthylivingapp.LearnEating">
+
+<!--'RelativeLayout' has been used to define the layout of this screen.-->
+<!--The widgets below are used for the activity_learn_eating.xml file. I have specified the attributes for each widget.-->
+<!--'android:id' references the ID attribute from the Design tab in this XML file.-->
+<!--'android:text' and 'android:textColor' references the string and colour values from the strings.xml file and colors.xml file.-->
+<!--The 'android:layout...' attributes defines where the widgets are displayed on the screen.-->
+<!--The 'android:text...' attributes defines the style of text to be displayed (for example, the colour, size and style).-->
+<!--A variety of widgets have been used, including: TextView and ImageView.-->
+<!--'ScrollView' has been used to allow the user to scroll up and down the page. The widgets are enclosed inside.-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tvFact1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="13dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/text_fact_one"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvFact2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvFact1"
+                android:layout_alignStart="@+id/tvFact1"
+                android:layout_below="@+id/tvFact1"
+                android:layout_marginTop="35dp"
+                android:text="@string/text_fact_two"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivFiveFoodGroups"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvFact2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="400dp"
+                android:maxWidth="400dp"
+                android:src="@drawable/fivefoodgroups" />
+
+            <TextView
+                android:id="@+id/tvFact3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvFact1"
+                android:layout_alignStart="@+id/tvFact1"
+                android:layout_below="@+id/ivFiveFoodGroups"
+                android:layout_marginTop="23dp"
+                android:text="@string/text_fact_three"
+                android:textColor="@color/purple"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivBanana"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvFact4"
+                android:layout_alignStart="@+id/tvFact4"
+                android:layout_alignTop="@+id/ivWatermelon"
+                android:adjustViewBounds="true"
+                android:maxHeight="50dp"
+                android:maxWidth="50dp"
+                android:src="@drawable/banana" />
+
+            <ImageView
+                android:id="@+id/ivWatermelon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/tvFact1"
+                android:layout_alignRight="@+id/tvFact1"
+                android:layout_below="@+id/tvFact3"
+                android:layout_marginEnd="101dp"
+                android:layout_marginRight="101dp"
+                android:layout_marginTop="24dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="50dp"
+                android:maxWidth="50dp"
+                android:src="@drawable/watermelon" />
+
+            <ImageView
+                android:id="@+id/ivBroccoli"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/ivBanana"
+                android:layout_marginLeft="28dp"
+                android:layout_marginStart="28dp"
+                android:layout_toEndOf="@+id/tvFact1"
+                android:layout_toRightOf="@+id/tvFact1"
+                android:adjustViewBounds="true"
+                android:maxHeight="60dp"
+                android:maxWidth="60dp"
+                android:src="@drawable/broccoli" />
+
+            <TextView
+                android:id="@+id/tvFact4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivBanana"
+                android:layout_alignLeft="@+id/tvFact1"
+                android:layout_alignStart="@+id/tvFact1"
+                android:layout_marginTop="15dp"
+                android:text="@string/text_fact_four"
+                android:textColor="@color/gold"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivBurger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvFact5"
+                android:layout_alignStart="@+id/tvFact5"
+                android:layout_alignTop="@+id/ivPizza"
+                android:layout_marginLeft="53dp"
+                android:layout_marginStart="53dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="50dp"
+                android:maxWidth="50dp"
+                android:src="@drawable/burger" />
+
+            <ImageView
+                android:id="@+id/ivPizza"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/tvFact4"
+                android:layout_alignRight="@+id/tvFact4"
+                android:layout_below="@+id/tvFact4"
+                android:layout_marginEnd="53dp"
+                android:layout_marginRight="53dp"
+                android:layout_marginTop="23dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="50dp"
+                android:maxWidth="50dp"
+                android:src="@drawable/pizza" />
+
+            <TextView
+                android:id="@+id/tvFact5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvFact1"
+                android:layout_alignStart="@+id/tvFact1"
+                android:layout_below="@+id/ivPizza"
+                android:layout_marginTop="23dp"
+                android:text="@string/text_fact_five"
+                android:textColor="@color/dark_green"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvFact6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvFact5"
+                android:layout_alignLeft="@+id/tvFact1"
+                android:layout_alignStart="@+id/tvFact1"
+                android:layout_marginTop="15dp"
+                android:text="@string/text_fact_six"
+                android:textColor="@color/dark_blue"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivWater"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/tvFact6"
+                android:layout_marginTop="40dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="100dp"
+                android:maxWidth="100dp"
+                android:src="@drawable/water" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
